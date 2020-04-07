@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Destini_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-hG-9pI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="RVz-s4-fh3">
+                                <rect key="frame" x="20" y="0.0" width="374" height="876"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v56-6B-fnH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="662"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-vc-Ube">
+                                        <rect key="frame" x="0.0" y="689" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Sug-yy-941"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" backgroundImage="choice1Background"/>
+                                        <connections>
+                                            <action selector="answer2Submitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KI8-D7-UCI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th7-ZS-5Sf">
+                                        <rect key="frame" x="0.0" y="796" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Oe5-ha-xLf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Button" backgroundImage="choice2Background">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answer1Submitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TGD-sk-37B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RVz-s4-fh3" secondAttribute="bottom" constant="20" symbolic="YES" id="8zR-Av-QCT"/>
+                            <constraint firstAttribute="trailing" secondItem="RVz-s4-fh3" secondAttribute="trailing" constant="20" symbolic="YES" id="9zE-2V-ELN"/>
+                            <constraint firstItem="UZF-hG-9pI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wy1-uP-M0d"/>
+                            <constraint firstItem="UZF-hG-9pI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZrJ-og-KCP"/>
+                            <constraint firstAttribute="trailing" secondItem="UZF-hG-9pI" secondAttribute="trailing" id="b7o-7p-Nzj"/>
+                            <constraint firstAttribute="bottom" secondItem="UZF-hG-9pI" secondAttribute="bottom" id="cnc-4Q-Uao"/>
+                            <constraint firstItem="RVz-s4-fh3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wa7-mv-fxc"/>
+                            <constraint firstItem="RVz-s4-fh3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="wqO-rh-tkw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer1" destination="th7-ZS-5Sf" id="D7G-Qf-HhT"/>
+                        <outlet property="answer2" destination="0TO-vc-Ube" id="NAE-3m-UsR"/>
+                        <outlet property="questionText" destination="v56-6B-fnH" id="pcP-TF-hLp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="958" height="1793"/>
+        <image name="choice1Background" width="1370.5" height="363"/>
+        <image name="choice2Background" width="1370.5" height="363"/>
+    </resources>
+</document>
